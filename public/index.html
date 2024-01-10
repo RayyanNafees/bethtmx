@@ -5,40 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BETH Crash Course</title>
     <script src="https://unpkg.com/htmx.org"></script>
-    <script src="https://unpkg.com/@unocss/runtime"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico/css/pico.classless.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico/css/pico.min.css"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body>
-    <section class="container">
-      <h1 class="mt-5">Search contacts</h1>
-      <progress class="htmx-indicator"></progress>
-      <input
-        type="search"
-        name="search"
-        hx-post="/search/api"
-        hx-trigger="input changed delay:500ms, search"
-        hx-target="#contacts"
-        hx-swap="outerHTML"
-        hx-indicator="progress"
-      />
-
-      <table>
-        <thread>
-          <tr class="bg-gray-800">
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thread>
-        <tbody id="contacts"></tbody>
-      </table>
-    </section>
+  <body class="bg-gray-600 text-center">
+    
   </body>
 </html>
