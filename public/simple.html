@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BETH crashcourse</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./loading.css" />
+  </head>
+
+  <body class="text-center bg-gray-600 text-white">
+    <h1 class="mt-10 text-5xl">HTMX Requests</h1>
+
+    <button
+      class="my-10 bg-blue-700 rounded-xl p-4"
+      hx-get="/users"
+      hx-target="div#data"
+      hx-indicator="span.htmx-indicator"
+      hx-vals='{"limit":1}'
+    >
+      Get request
+    </button>
+
+    <div class="p-4 rounded-xl bg-[#efefef] text-black b-red" id="data">
+      <span class="htmx-indicator">
+        <div class="sk-circle">
+          <div class="sk-circle1 sk-child"></div>
+          <div class="sk-circle2 sk-child"></div>
+          <div class="sk-circle3 sk-child"></div>
+          <div class="sk-circle4 sk-child"></div>
+          <div class="sk-circle5 sk-child"></div>
+          <div class="sk-circle6 sk-child"></div>
+          <div class="sk-circle7 sk-child"></div>
+          <div class="sk-circle8 sk-child"></div>
+          <div class="sk-circle9 sk-child"></div>
+          <div class="sk-circle10 sk-child"></div>
+          <div class="sk-circle11 sk-child"></div>
+          <div class="sk-circle12 sk-child"></div>
+        </div>
+      </span>
+    </div>
+  </body>
+</html>

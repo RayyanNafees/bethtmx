@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BETH crashcourse</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./loading.css" />
+  </head>
+
+  <body class="text-center bg-gray-600">
+    <div class="mt-8 container mx-auto">
+      <div class="bg-white p-4 border rounded-lg max-w-lg m-auto">
+        <h1 class="text-2xl mb-4 font-bold">Temperature converter</h1>
+        <form hx-post="/convert" hx-target="#temp" hx-indicator="#loading">
+          <div>
+            <label for="f">Fahrenheit: </label>
+            <input
+              value="32"
+              type="number"
+              name="f"
+              id="f"
+              class="border p-2 rounded"
+              required
+            />
+            <button type="submit" class="bg-blue-600 p-2 rounded-lg text-white">
+              Convert
+            </button>
+          </div>
+        </form>
+        <div id="temp" class="text-xl mt-5">
+          <img
+            class="htmx-indicator mx-auto"
+            id="loading"
+            alt="Loading..."
+            src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/loading.gif"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

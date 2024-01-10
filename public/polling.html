@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BETH crashcourse</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-600 min-h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-xl mb-5">Weather in New York</h1>
+      <p class="text-5xl">
+        <span hx-get="/get-temperature" hx-trigger="every 2s">Loading...</span>
+      </p>
+    </div>
+  </body>
+</html>
