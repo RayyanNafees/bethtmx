@@ -1,6 +1,6 @@
 import { Elysia, t } from 'elysia'
 import { html } from '@elysiajs/html'
-import { simple, poll, users, convert, search } from './routes'
+import { simple, poll, users, convert, search, validation } from './routes'
 
 const app = new Elysia()
   .use(html())
@@ -10,6 +10,7 @@ const app = new Elysia()
   .use(users)
   .use(poll)
   .use(search)
+  .use(validation)
   .get('/', Bun.file('public/index.html'))
 
   .listen(3000)
